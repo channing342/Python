@@ -10,8 +10,9 @@ for name in noc:
  					print (d_name)
  			else:
  				print(e_name)
-
+ 				#print()	
  	else:
  			print (name)
+ 			#print ()
 
 
