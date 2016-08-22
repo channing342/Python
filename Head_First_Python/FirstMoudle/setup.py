@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
 	name			=	'channing',
-	version			=	'1.1.0',
+	version			=	'1.3.0',
 	py_modules		=	['channing'],
 	author			=	'channing',
 	author_email	=	'channig342@gmail.com'
