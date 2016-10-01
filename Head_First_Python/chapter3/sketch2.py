@@ -9,7 +9,7 @@ try:
 			print(role,end='')
 			print(' say : ',end='')
 			print(the_spoken,end='')
-	except 
+	except ValueError:
 		pass
-except:
+except IOError:
 	print('File is missing')
