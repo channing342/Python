@@ -1,7 +1,5 @@
 noc = [ "Channing","Luke","Bii" , [ 27, 29 , 25 , [ "Supervised"  , "Senior" , "Junior" ] ] ]
 
-
-
 for name in noc:
  	if isinstance(name,list):
  		for e_name in name: 		

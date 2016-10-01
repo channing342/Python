@@ -1,13 +1,15 @@
 import os 
 os.chdir('/Users/channingliu/Python/Head_First_Python/chapter3')
 
-if os.path.exists('sketch.txt'):
+try:
 	data = open('sketch.txt')
-	for each_line in data:
-		if  each_line.find(':') != -1 :
+	try: 
+		for each_line in data:
 			(role , the_spoken) = each_line.split(":",1)
 			print(role,end='')
 			print(' say : ',end='')
 			print(the_spoken,end='')
-else:
+	except 
+		pass
+except:
 	print('File is missing')
