@@ -20,8 +20,8 @@ except IOError:
         print('File is missing')
 
 try:
-        with open("man.txt","w") as out,open("other_man.txt","w") as out1
-        print(man,file=out)
-        print(other,file=out1)
+        with open("man.txt","w") as out,open("other_man.txt","w") as out1:
+        	print(man,file=out)
+        	print(other,file=out1)
 except IOError:
         print('File error.')
