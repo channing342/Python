@@ -3,7 +3,7 @@
 import sys
 import os
 import pickle
-os.chdir('/home/tomcat/Python/Head_First_Python/chapter4')
+os.chdir('/Users/channingliu/Python/Head_First_Python/chapter4')
 
 man=[]
 other=[]
@@ -29,7 +29,9 @@ try:
         	pickle.dump(other,out1)
 except IOError:
         print('File error.')
-
+except pickle.pickleError as perr:
+        print('Pickle Error : ', str(perr))
+        
 def print_lol(the_list,indent=False,level=0,fh=sys.stdout):
 	for each_item in the_list:
 		if isinstance(each_item,list):
@@ -39,7 +41,8 @@ def print_lol(the_list,indent=False,level=0,fh=sys.stdout):
 				for tab_stop in range(level):
 					print("\t",end="",file=fh)
 			print(each_item,file=fh)
-
+#print(man)
 print_lol(man)
 print ()
+#print(other)
 print_lol(other)
