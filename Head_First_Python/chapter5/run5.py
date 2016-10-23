@@ -25,3 +25,8 @@ james = get_file('james.txt')
 julie = get_file('julie.txt')
 mikey = get_file('mikey.txt')
 sarah = get_file('sarah.txt')
+
+print(sorted(set([sanitize(t) for t in james]))[0:3])
+print(sorted(set([sanitize(t) for t in julie]))[0:3])
+print(sorted(set([sanitize(t) for t in mikey]))[0:3])
+print(sorted(set([sanitize(t) for t in sarah]))[0:3])
