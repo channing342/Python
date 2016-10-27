@@ -16,15 +16,17 @@ def get_file(the_file):
         try:
                 with open(the_file) as file:
                         data = file.readline()
-                return(data.strip().split(','))
+                temp1=(data.strip().split(','))
+                return{'Name':temp1.pop(0),'Birthday':temp1.pop(0),'Time':sorted(set([sanitize(t) for t in temp1]))[0:3]}
         except IOError as ioerror:
                 print('File error : ' +str(ioerror))
                 return(None)
 
-
 sarah = get_file('sarah2.txt')
+print(sarah['Time'])
+#sarah_data = {}
+#sarah_data['Name'] = sarah.pop(0)
+#sarah_data['Birthday'] = sarah.pop(0)
+#sarah_data['Time'] = sarah
 
-print(sarah)
-
-(sarah_name,sarah_dob) = sarah.pop(0) , sarah.pop(0)
-print(sarah_name + "'s fastest times are : " + str(sorted(set([sanitize(t) for t in sarah]))[0:3]))
+#print(sarah_data['Name'] + "'s fastest times are : " + str(sorted(set([sanitize(t) for t in sarah_data['Time']]))[0:3]))
