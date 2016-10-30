@@ -35,10 +35,10 @@ james = get_file('james2.txt')
 julie = get_file('julie2.txt')
 mikey = get_file('mikey2.txt')
 
-print(sarah.name,sarah.birthday,sarah.top3())
-print(james.name,james.birthday,james.top3())
-print(julie.name,julie.birthday,julie.top3())
-print(mikey.name,mikey.birthday,mikey.top3())
+print(sarah.name + "'s fastest times are : " + str(sarah.top3()))
+print(james.name + "'s fastest times are : " + str(james.top3()))
+print(julie.name + "'s fastest times are : " + str(julie.top3()))
+print(mikey.name + "'s fastest times are : " + str(mikey.top3()))
 
 
 
