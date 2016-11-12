@@ -3,9 +3,9 @@
 
 class AtheletList(list):
         def __init__(self, a_name,a_Birthday=None,a_Time=[]):
-        		list.__init__([])
                 self.name=a_name
                 self.birthday=a_Birthday
+                list.__init__([])
                 self.extend(a_Time)
         def top3(self):
             return (sorted([sanitize(t) for t in self])[0:3])
@@ -42,9 +42,10 @@ print(julie.name + "'s fastest times are : " + str(julie.top3()))
 print(mikey.name + "'s fastest times are : " + str(mikey.top3()))
 
 
-#channing=AtheletList('Channing')
-#channing.extend(['0.01','2-38','1.69'])
+channing=AtheletList('Channing Liu')
+channing.extend(['0.01','2-38','1.69'])
 
+print (channing)
 
 
 #     def __init__(self,a_name):
